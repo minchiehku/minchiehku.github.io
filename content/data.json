@@ -12,7 +12,7 @@
     }
   },
   "intro": {
-    "image": "assets/images/resume-profile.PNG",
+    "image": "assets/images/resume-profile.PNG?v=2",
     "heading": "About Me",
     "paragraphs": [
       "Master's degree in Information Management from NTPU with hands-on experience in Java, Python, and GenAI. At Far EasTone, utilized AI tools to develop an automated auditing scoring system (RAG) and automated monitoring mechanisms. Applying 4 years of sales experience to better understand user requirements and assist in delivering technical solutions. Holds AWS/Azure certifications and a TOEIC score of 950."
