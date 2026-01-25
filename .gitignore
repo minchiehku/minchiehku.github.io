@@ -1,0 +1,4 @@
+# Ignore archived images folder
+assets/images/封存/
+
+# You can add other ignore rules below
