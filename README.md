@@ -37,7 +37,7 @@ Before you start, make sure you have the following:
     - Preserve existing styles and layout (no CSS changes required).
 
     Key features
-    - Centralized content in `content/data.json` (pageTitle, header, intro, education, projects, work, certifications, skills, languages)
+    - Centralized content in `content/data.json` (pageTitle, header, intro, education, projects, work, certifications, skills)
     - Client-side renderer in `assets/js/content-loader.js`
     - Works with static hosting (GitHub Pages, Netlify, static S3, etc.)
 
@@ -57,7 +57,7 @@ Before you start, make sure you have the following:
     - `header` (object) — name, taglines, contact links
     - `intro` (object) — image src, heading, paragraphs[]
     - `education`, `papers`, `projects`, `work` (arrays) — lists of items
-    - `certifications`, `skills`, `languages`, `footer`, `contacts`
+    - `certifications`, `skills`, `footer`, `contacts`
 
     Content JSON API
     -----------------
@@ -77,7 +77,6 @@ Before you start, make sure you have the following:
         "work": [ { "title": "...", "meta": "...", "bullets": ["..."] } ],
         "certifications": [ { "title": "...", "meta": "..." } ],
         "skills": { "technical": ["..."], "design": ["..."] },
-        "languages": ["TOEIC 950"],
         "footer": "Copyright © Min-Chieh Ku"
     }
     ```
@@ -91,7 +90,6 @@ Before you start, make sure you have the following:
     - `work`: array — each item has `title`, `meta`, `bullets`.
     - `certifications`: array — items with `title` and `meta`.
     - `skills`: object — `technical` and `design` arrays of strings.
-    - `languages`: array of strings.
     - `footer`: string — footer text.
 
     Usage notes

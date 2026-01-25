@@ -1,7 +1,17 @@
+/*
+  content-loader.js
+  功能：從 `content/data.json` 讀取結構化內容，動態產生 HTML 並注入到頁面中。
+  設計原則：保持樣式與 HTML 結構外殼不變，只由此檔案建立內部內容（避免在 index.html 中放大量文字）。
+  注意：此檔需在 HTTP(s) 伺服器下使用（fetch 在 file:// 下會失敗）。
+*/
 (function(){
-  function el(sel){return document.querySelector(sel);} 
+  // 小工具：用 CSS 選擇器取得單一元素
+  function el(sel){ return document.querySelector(sel); }
+
+  // 小工具：建立一個元素並可選擇性設定 class
   function create(tag, cls){ var e = document.createElement(tag); if(cls) e.className = cls; return e; }
 
+  // 渲染頁首（姓名、標語、聯絡資訊）
   function renderHeader(data){
     var row = create('div','row align-items-center');
     var titleCol = create('div','resume-title col-12 col-md-6 col-lg-8 col-xl-9');
@@ -21,6 +31,7 @@
     return row.outerHTML;
   }
 
+  // 渲染個人簡介（照片、標題與段落）
   function renderIntro(data){
     var row = create('div','row align-items-center');
     var imgCol = create('div','col-12 col-md-3 col-xl-2 text-center');
@@ -41,6 +52,7 @@
     return row.outerHTML;
   }
 
+  // 渲染學歷區塊，list 為學歷項目陣列
   function renderEducation(list){
     var sec = create('section','project-section py-3');
     sec.innerHTML = "<h3 class='text-uppercase resume-section-heading mb-4'>Education</h3>";
@@ -52,6 +64,7 @@
     return sec.outerHTML;
   }
 
+  // 渲染論文或研究成果清單
   function renderPapers(list){
     if(!list || !list.length) return '';
     var sec = create('section','paper-section py-3');
@@ -69,6 +82,7 @@
     return sec.outerHTML;
   }
 
+  // 渲染專案清單（含選擇性連結）
   function renderProjects(list){
     if(!list || !list.length) return '';
     var sec = create('section','paper-section py-3');
@@ -87,6 +101,7 @@
     return sec.outerHTML;
   }
 
+  // 渲染工作經歷（標題、時間、重點）
   function renderWork(list){
     if(!list || !list.length) return '';
     var sec = create('section','work-section py-3'); sec.innerHTML = "<h3 class='text-uppercase resume-section-heading mb-4'>Work Experiences</h3>";
@@ -100,9 +115,10 @@
     return sec.outerHTML;
   }
 
+  // 渲染認證/證照清單
   function renderCerts(list){
     if(!list || !list.length) return '';
-    var sec = create('section','project-section py-3'); sec.innerHTML = "<h3 class='text-uppercase resume-section-heading mb-4'>Cloud Certifications</h3>";
+    var sec = create('section','project-section py-3'); sec.innerHTML = "<h3 class='text-uppercase resume-section-heading mb-4'>Certifications</h3>";
     list.forEach(function(c){
       var item = create('div','item mb-3');
       item.innerHTML = "<div class='item-heading row align-items-center mb-2'>\n        <h4 class='item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0'>"+c.title+"</h4>\n        <div class='item-meta col-12 col-md-6 col-lg-4 text-muted text-start text-md-end'>"+c.meta+"</div>\n      </div>";
@@ -111,6 +127,7 @@
     return sec.outerHTML;
   }
 
+  // 渲染側欄：技能
   function renderAside(data){
     var out = '';
     out += "<section class='skills-section py-3'>\n  <h3 class='text-uppercase resume-section-heading mb-4'>Skills</h3>\n  <div class='item'>\n    <h4 class='item-title'>Technical</h4>\n    <ul class='list-unstyled resume-skills-list'>";
@@ -118,9 +135,6 @@
     out += "</ul>\n  </div>\n  <div class='item'>\n    <h4 class='item-title'>Design</h4>\n    <ul class='list-unstyled resume-skills-list'>";
     out += data.design.map(function(s){ return "<li class='mb-2'>"+s+"</li>"; }).join('');
     out += "</ul>\n  </div>\n</section>\n";
-    out += "<section class='languages-section py-3'>\n  <h3 class='text-uppercase resume-section-heading mb-4'>Languages</h3>\n  <ul class='list-unstyled resume-education-list'>";
-    out += data.languages.map(function(l){ return "<li class='mb-3'><div class='resume-degree font-weight-bold'>"+l+"</div></li>"; }).join('');
-    out += "</ul>\n</section>\n";
     return out;
   }
 
@@ -133,14 +147,14 @@
       var i = document.querySelector('[data-content-id="intro"]'); if(i) i.innerHTML = renderIntro(data.intro);
       var m = document.querySelector('[data-content-id="main"]'); if(m) {
         var html = '';
+        html += renderWork(data.work);
         html += renderEducation(data.education);
         html += renderPapers(data.papers);
         html += renderProjects(data.projects);
-        html += renderWork(data.work);
         html += renderCerts(data.certifications);
         m.innerHTML = html;
       }
-      var a = document.querySelector('[data-content-id="aside"]'); if(a) a.innerHTML = renderAside({ technical: data.skills.technical, design: data.skills.design, languages: data.languages });
+      var a = document.querySelector('[data-content-id="aside"]'); if(a) a.innerHTML = renderAside({ technical: data.skills.technical, design: data.skills.design });
       var f = document.querySelector('.footer .copyright'); if(f && data.footer) f.innerText = data.footer;
     }).catch(function(err){ console.error('content load failed', err); });
   });
