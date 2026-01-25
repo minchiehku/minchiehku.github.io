@@ -1,0 +1,103 @@
+{
+  "pageTitle": "MinChieh Ku Resume",
+  "header": {
+    "name": "MinChieh Ku",
+    "taglines": [
+      "Information Management | Software Engineer",
+      "4 Years of B2B Sales Experience"
+    ],
+    "contacts": {
+      "github": "https://github.com/minchiehku",
+      "email": "kujoe111@gmail.com",
+      "location": "New Taipei City"
+    }
+  },
+  "intro": {
+    "image": "assets/images/resume-profile.PNG",
+    "heading": "About Me",
+    "paragraphs": [
+      "I am Min-Chieh (Joe) Ku, a graduate of the <strong>Graduate Institute of Information Management</strong> at <strong>National Taipei University</strong>. I have experience with multiple programming languages, including <strong>Java</strong>, <strong>Python</strong>, <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and <strong>SQL</strong>, and have worked with <strong>object-oriented programming</strong>. I am also familiar with frameworks like <strong>Spring</strong> and <strong>Flask</strong>, as well as containerization technologies such as <strong>Docker</strong>. In the field of cloud technology, I hold certifications including <strong>AWS CCP</strong>, <strong>SAA</strong>, <strong>ML</strong>, and <strong>Microsoft AI-900</strong>. I completed my undergraduate studies in the <strong>Department of Product Design</strong> at <strong>Ming Chuan University</strong>, where I developed a foundation in <strong>UI/UX design</strong>.",
+      "Before attending graduate school, I worked as a <strong>B2B sales representative</strong> at an equipment manufacturing company. My role focused on <strong>meeting customer needs</strong>, <strong>facilitating contract signings</strong>, and <strong>providing customer service</strong>. Within six months, I contributed to <strong>20% of the company's total sales target</strong>. My goal is to apply my knowledge in <strong>information management</strong> and previous sales experience to the technology industry."
+    ]
+  },
+  "education": [
+    {
+      "title": "National Taipei University．Master's Degree",
+      "meta": "2022/09 - 2024/08",
+      "content": "Graduate Institute of Information Management"
+    },
+    {
+      "title": "Ming Chuan University．Bachelor's Degree",
+      "meta": "2012/09 - 2016/06",
+      "content": "Department of Product Design"
+    }
+  ],
+  "papers": [
+    {
+      "title": "Research on Scheduling and Allocation for Unmanned Taxi Dispatch Services.",
+      "bullets": [
+        "Through <strong>designing a ride-matching algorithm in a Java-based simulation environment</strong>, a ride-matching system for unmanned taxis was developed.",
+        "Using <strong>object-oriented design</strong>, each role is abstracted as an independent object, calculating the next event's occurrence time and storing it in an <strong>ArrayList</strong> as an event queue.",
+        "The algorithm focuses on the <strong>matching problem of multiple customers and multiple vehicles</strong>, with each vehicle being paired with only one customer.",
+        "The algorithm considers the <strong>customers' tolerable waiting times</strong> and different vehicle dispatch methods, reducing the overall average waiting time and the worst-case waiting time."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "My Personal Website",
+      "bullets": [
+        "List previous <strong>educational background</strong>, <strong>work experience</strong>, <strong>projects</strong>, <strong>certifications</strong>, <strong>skills</strong>, familiar <strong>frontend</strong>, <strong>backend</strong>, and <strong>database technologies</strong>, and <strong>language abilities</strong>.",
+        "This website was developed using <strong>Docker technology</strong> and deployed on <strong>AWS</strong>. It runs containers on <strong>EC2</strong> using <strong>Docker Compose</strong>. The frontend and backend are built with <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>Java</strong>, and <strong>Spring Boot</strong>, with <strong>MySQL</strong> as the database.",
+        "The <strong>GitHub Page frontend design</strong> is the same as that of the <strong>personal-website project</strong> and is hosted using <strong>GitHub's free static domain service</strong>."
+      ],
+      "link": "https://minchiehku.github.io/"
+    },
+    {
+      "title": "Cat Breed Detect",
+      "bullets": [
+        "<strong>catbreeddetect.com</strong> is a <strong>web-based application</strong> designed to <strong>predict the breed of a cat</strong> from an <strong>uploaded image</strong>, utilizing a <strong>trained deep learning model</strong> for <strong>accurate classification</strong>.",
+        "The model is developed using the <strong>Cat Breeds Dataset from Kaggle</strong> and is capable of classifying cat images into <strong>67 distinct breeds</strong>.",
+        "The application is <strong>containerized using Docker and Docker Compose</strong> and deployed on <strong>AWS ECS (Fargate)</strong>."
+      ]
+    },
+    {
+      "title": "TrainGymPT",
+      "bullets": [
+        "<strong>TrainGymPT</strong> is a <strong>conversational AI fitness assistant application</strong> that provides <strong>exercise recommendations</strong> based on user queries.",
+        "This app combines <strong>NLP models</strong> for <strong>intent classification</strong> and <strong>dialogue generation</strong>.",
+        "Frontend: <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>; Backend: <strong>Python</strong>, <strong>Flask</strong>."
+      ]
+    }
+  ],
+  "work": [
+    {
+      "title": "Project Product Salesperson",
+      "meta": "Dewtek Inc. | 2017/05 - 2021/08 (4 years)",
+      "bullets": [
+        "Assisted in preparing documents for sales, such as equipment specification sheets, operation manuals, equipment selection guides, site planning documents, benefit calculation reports, and quotations.",
+        "Supported equipment design tasks, responsible for designing nameplates, brand logo stickers, and operation labels.",
+        "Participated in product design, including new shapes, functional concept designs, and equipment site planning designs.",
+        "Collaborated with sales during client visits to conduct site surveys, measure equipment installation areas, and plan water, electricity, and gas connections and pathways, while documenting all details meticulously.",
+        "Successfully secured over 10 equipment sales contracts and contributed to 20% of the company's sales target in the final six months."
+      ]
+    }
+  ],
+  "certifications": [
+    { "title": "AWS Certified Machine Learning - Specialty", "meta": "Exp. Date 2027.02.21" },
+    { "title": "AWS Certified Solutions Architect - Associate", "meta": "Exp. Date 2026.05.26" },
+    { "title": "AWS Certified Cloud Practitioner", "meta": "Exp. Date 2026.01.17" },
+    { "title": "Microsoft Certified: Azure AI Fundamentals", "meta": "2024.04.08 ~" }
+  ],
+  "skills": {
+    "technical": ["Java", "Python", "HTML", "CSS", "JavaScript", "SQL", "MySQL", "Microsoft SQL Server", "Spring", "Flask", "Docker", "Docker Compose"],
+    "design": ["Adobe AI/PS", "UX/UI", "Rhinos"]
+  },
+  "languages": ["TOEIC 950"],
+  "footer": "Copyright © Min-Chieh Ku",
+  "contacts": {
+    "github": "https://github.com/minchiehku",
+    "email": "kujoe111@gmail.com",
+    "location": "New Taipei City"
+  }
+}
