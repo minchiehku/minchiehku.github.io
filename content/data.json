@@ -103,7 +103,7 @@
   ],
   "skills": {
     "technical": ["Java", "Python", "TypeScript", "HTML/CSS/JavaScript","SQL", "MySQL", "MS SQL", "Spring Boot", "Flask", "Docker", "Git", "AWS", "Azure", "Databricks", "LangChain", "RAG", "Playwright"],
-    "design": ["Adobe AI/PS", "UX/UI", "Rhinos"]
+    "design": ["Adobe AI/PS", "Rhinos"]
   },
   "footer": "Copyright © Min-Chieh Ku",
   "contacts": {
