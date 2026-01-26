@@ -72,7 +72,7 @@
     list.forEach(function(p){
       var item = create('div','item mb-3');
       var heading = create('div','item-heading row align-items-center mb-2');
-      heading.innerHTML = "<h4 class='item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0'><nobr>"+p.title+"</nobr></h4>";
+      heading.innerHTML = "<h4 class='item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0'>"+p.title+"</h4>";
       var content = create('div','item-content');
       var ul = create('ul','resume-list');
       p.bullets.forEach(function(b){ var li = create('li'); li.innerHTML = b; ul.appendChild(li); });
@@ -90,7 +90,7 @@
     list.forEach(function(p){
       var item = create('div','item mb-3');
       var heading = create('div','item-heading row align-items-center mb-2');
-      heading.innerHTML = "<h4 class='item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0'><nobr>"+p.title+"</nobr></h4>";
+      heading.innerHTML = "<h4 class='item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0'>"+p.title+"</h4>";
       var content = create('div','item-content');
       var ul = create('ul','resume-list');
       p.bullets.forEach(function(b){ var li = create('li'); li.innerHTML = b; ul.appendChild(li); });
