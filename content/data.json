@@ -66,6 +66,14 @@
         "This app combines <strong>NLP models</strong> for <strong>intent classification</strong> and <strong>dialogue generation</strong>.",
         "Frontend: <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>; Backend: <strong>Python</strong>, <strong>Flask</strong>."
       ]
+    },
+    {
+      "title": "Financial AI Agent",
+      "bullets": [
+        "This project is an <strong>autonomous decision-making microservice</strong> that automatically delivers <strong>data-driven market analysis reports</strong>.",
+        "Integrates <strong>Llama 3</strong> and <strong>Tool Calling</strong> to dynamically route queries to <strong>Qdrant RAG</strong>, <strong>live stock APIs</strong>, and <strong>web searches</strong>.",
+        "Backend & Orchestration: <strong>FastAPI</strong>, <strong>LangGraph</strong>; AI & Database: <strong>Llama 3</strong>, <strong>Qdrant</strong>."
+      ]
     }
   ],
   "work": [
